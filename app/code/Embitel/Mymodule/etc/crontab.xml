@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-intance"
+xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_cron:etc/crontab.xsd">
+<group id = "default">
+<job name = "Embitel_Mymodule_Cron" instance  = "Embitel\Mymodule\Cron\Test" method = "execute">
+<schedule>*/10 * * * *</schedule>
+</job>
+</group>
+</config>

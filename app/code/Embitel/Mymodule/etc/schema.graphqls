@@ -1,0 +1,19 @@
+type Query  
+    {
+        custinfo:custinfoOutput @resolver(class:"Embitel\\Mymodule\\Model\\Resolver\\CustDetails") @doc(description:"Customer Details")    
+    }
+type custinfoOutput 
+    {
+        total_count:Int @doc(description:"Total No of Customers"),
+        items:[custinfor] @doc(description:"Customer Data")
+    }
+type custinfor 
+    {
+        firstname:String @doc(description:"Customer First Name"),
+        lastname:String @doc(description:"Customer Last Name"),
+        email:String @doc(description:"Customer Email"),
+        mobile:String @doc(description:"Customer Mobile"),
+        city:String @doc(description:"Customer City"),
+        state:String @doc(description:"Customer State"),
+        country:String @doc(description:"Customer Country")
+    }
